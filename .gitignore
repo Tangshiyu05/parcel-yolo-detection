@@ -1,0 +1,25 @@
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+.venv/
+venv/
+
+# ---- 数据集（不入库，Kaggle 走 /kaggle/input）----
+datasets/
+*.zip
+*.tar.gz
+
+# ---- 训练产物 ----
+outputs/weights/
+outputs/logs/
+runs/
+*.pt
+!core/pretrained/.gitkeep
+
+# ---- 日志与临时文件 ----
+*.log
+.DS_Store
+.idea/
+.vscode/
