@@ -9,11 +9,11 @@ from configs.config import SETTINGS, DATA_YAML, WEIGHTS_DIR, LOGS_DIR
 
 
 def build_model(use_attention: bool):
-    """加载基线或带 TAM 的自定义结构。"""
+    """加载基线模型或带 TAM 的自定义结构。"""
     if use_attention:
         # 自定义结构需在 core/yolov8s_tam.yaml 中声明并完成模块注册
         model = YOLO(SETTINGS["custom_model_yaml"])
-        else:
+    else:
         model = YOLO(SETTINGS["base_model"])
     return model
 
